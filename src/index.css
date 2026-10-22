@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Alexandria", system-ui, sans-serif;
+    --color-ink-950: #0c0a07;
+    --color-ink-900: #14110b;
+    --color-ink-800: #1d1910;
+    --color-ink-700: #2b2517;
+    --color-gold-300: #f5d27a;
+    --color-gold-400: #e8b947;
+    --color-gold-500: #d4a22a;
+    --color-gold-600: #b08420;
+    --color-sand: #f4ecd8;
+    --color-mute: #a89f88;
+}
+
+html { color-scheme: dark; }
+body {
+    background: var(--color-ink-950) radial-gradient(ellipse 80% 40% at 50% 0%, rgba(212,162,42,.16), transparent 70%) no-repeat;
+    color: var(--color-sand);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+}
+button, a { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--color-gold-400); outline-offset: 2px; }
+.scroll-hide { scrollbar-width: none; }
+.scroll-hide::-webkit-scrollbar { display: none; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
